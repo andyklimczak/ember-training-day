@@ -9,5 +9,7 @@
           tr
             td 
               = movie.name
+            td
+              = movie.year
   .col-md-8
     = outlet
