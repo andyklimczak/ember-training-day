@@ -1,2 +1,3 @@
-| in movies show
-log model
+h2 = model.name
+h3 = model.year
+p = model.description
