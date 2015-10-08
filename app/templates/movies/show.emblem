@@ -9,7 +9,7 @@ table.table
       th Actor
       th Character
   tbody
-  each appearance in model.appearances
+  each model.appearances as |appearance|
     tr
       td = appearance.actor.name
       td = appearance.character.name
