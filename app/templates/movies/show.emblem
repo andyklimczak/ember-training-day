@@ -1,7 +1,7 @@
 h2 = model.name
 h3 = model.year
 p = model.description
-log model
+
 h4  Cast
 table.table
   thead
@@ -11,5 +11,6 @@ table.table
   tbody
   each model.appearances as |appearance|
     tr
-      td = appearance.actor.name
+      link-to 'actors.show' appearance.actor
+        td = appearance.actor.name
       td = appearance.character.name

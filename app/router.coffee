@@ -8,7 +8,8 @@ Router.map ->
   @route "index", { path: "/" }
   @route "movies", { path: "/movies" }, ->
     @route "show", { path: "/:movie_id" }
-  @route "actors", { path: "/actors" }
+  @route "actors", { path: "/actors" }, ->
+    @route "show", { path: "/:actor_id" }
   @route "cards", { path: "/cards" }
   
 `export default Router`

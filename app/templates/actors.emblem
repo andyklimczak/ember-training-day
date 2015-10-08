@@ -3,11 +3,12 @@
     table.table.table-striped
       thead
         tr
-          th Movie
+          th Actor
       tbody
         each model as |actor|
           tr
             td 
-                =actor.name
+              link-to 'actors.show' actor
+                = actor.name
   .col-md-8
     = outlet
