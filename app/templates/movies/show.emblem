@@ -1,3 +1,15 @@
 h2 = model.name
 h3 = model.year
 p = model.description
+log model
+h4  Cast
+table.table
+  thead
+    tr
+      th Actor
+      th Character
+  tbody
+  each appearance in model.appearances
+    tr
+      td = appearance.actor.name
+      td = appearance.character.name
