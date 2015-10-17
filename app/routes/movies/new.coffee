@@ -44,5 +44,8 @@ MoviesNewRoute = Ember.Route.extend
     # "navigate away" message, or things of that nature.
     #
     # willTransition: (transition) -> 
+  actions:
+    save: ->
+      console.log('in submit')
 
 `export default MoviesNewRoute`

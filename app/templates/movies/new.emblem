@@ -1,1 +1,16 @@
-| new movies
+h4
+  | New Movie
+form{action 'save' on='submit'}
+  p
+    label 
+      | Name
+      = input type="text" value=model.name class="form-control"
+  p
+    label 
+      | Year
+      = input type="text" value=model.year class="form-control"
+  p
+    label 
+      | Description
+      = input type="text" value=model.description class="form-control"
+  = input type="submit" value="Save"
