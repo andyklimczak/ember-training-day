@@ -47,5 +47,12 @@ MoviesNewRoute = Ember.Route.extend
   actions:
     save: ->
       console.log('in submit')
+      this.modelFor('movies.new').save().then((movie) ->
+        console.log('saved')
+        @transitionTo('movies.show', movie)
+      , (error) ->
+        console.log('cannot save')
+        console.log(error)
+      )
 
 `export default MoviesNewRoute`
