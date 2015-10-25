@@ -5,6 +5,11 @@ form{action 'save' on='submit'}
     label 
       | Name
       = input type="text" value=model.name class="form-control"
+      if hasErrors
+        .form-group.has-error
+          p.help-block 
+            | Name cannot be blank
+
   p
     label 
       | Year

@@ -19,15 +19,17 @@ MoviesNewController = Ember.Controller.extend
   # actions:
   #   submitTheForm: () ->
   #     @get('model').set('someAttr', true).save()
-  
-   actions:
-     save: ->
-       @get('model').save().then((movie) ->
-         console.log 'movie saved'
-         @transitionTo('movies.show', movie)
-       , (error) ->
-         console.log 'movie not saved'
-       )
+  actions:
+    save: ->
+      @get('model').save().then((movie) ->
+        console.log 'movie saved'
+        @transitionTo('movies.show', movie)
+      , (error) ->
+        console.log 'movie not saved'
+        console.log(error)
+      )
+
+  hasErrors: Ember.computed.gt('model.errors.length', 0)
 
 
 `export default MoviesNewController`
